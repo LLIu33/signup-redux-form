@@ -1,13 +1,13 @@
 import React from "react";
 import { reduxForm } from "redux-form";
-import validate from "./validate";
+import validate from "../../validate";
 
-const WizardFormThirdPage = props => {
+const SignupFormSecondPage = props => {
   const { handleSubmit, previousPage } = props;
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <img src={require("../public/success.png")} alt="Success!" />
+        <img src={require("../../../public/success.png")} alt="Success!" />
         <div>
           <button type="button" className="previous" onClick={previousPage}>
             Previous
@@ -22,8 +22,8 @@ const WizardFormThirdPage = props => {
 };
 
 export default reduxForm({
-  form: "wizard",
+  form: "signup",
   destroyOnUnmount: false,
   forceUnregisterOnUnmount: true,
   validate
-})(WizardFormThirdPage);
+})(SignupFormSecondPage);

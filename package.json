@@ -1,7 +1,7 @@
 {
-  "name": "redux-form-wizard-example",
-  "description": "Example of how to do a multi-page \"wizard\" form using Redux Form",
-  "version": "0.0.32",
+  "name": "signup-redux-form",
+  "description": "Signup wizard form on ReactJS",
+  "version": "0.0.1",
   "dependencies": {
     "react": "15.5.3",
     "react-dom": "15.5.3",

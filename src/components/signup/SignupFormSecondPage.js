@@ -1,7 +1,7 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
-import validate from "./validate";
-import renderField from "./renderField";
+import validate from "../../validate";
+import renderField from "../renderField";
 const colors = ["Newspapers", "Radio", "TV", "Internet"];
 
 const renderError = ({ meta: { touched, error } }) =>
@@ -19,7 +19,7 @@ const renderColorSelector = ({ input, meta: { touched, error } }) => (
 
 const labelStyle = { textAlign: "center", color: "#4990E2" };
 
-const WizardFormSecondPage = props => {
+const SignupFormSecondPage = props => {
   const { handleSubmit, previousPage } = props;
   return (
     <form onSubmit={handleSubmit}>
@@ -78,8 +78,8 @@ const WizardFormSecondPage = props => {
 };
 
 export default reduxForm({
-  form: "wizard",
+  form: "signup",
   destroyOnUnmount: false,
   forceUnregisterOnUnmount: true,
   validate
-})(WizardFormSecondPage);
+})(SignupFormSecondPage);

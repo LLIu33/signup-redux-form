@@ -1,9 +1,9 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
-import validate from "./validate";
-import renderField from "./renderField";
+import validate from "../../validate";
+import renderField from "../renderField";
 
-const WizardFormFirstPage = props => {
+const SignupFormFirstPage = props => {
   const { handleSubmit } = props;
   return (
     <form onSubmit={handleSubmit}>
@@ -18,7 +18,7 @@ const WizardFormFirstPage = props => {
         name="confirmPassword"
         type="password"
         component={renderField}
-        label="Confirm Password"
+        label="Confirm"
       />
       <div>
         <button type="submit" className="next">Next</button>
@@ -28,8 +28,8 @@ const WizardFormFirstPage = props => {
 };
 
 export default reduxForm({
-  form: "wizard",
+  form: "signup",
   destroyOnUnmount: false,
   forceUnregisterOnUnmount: true,
   validate
-})(WizardFormFirstPage);
+})(SignupFormFirstPage);
